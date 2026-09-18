@@ -1,0 +1,33 @@
+{
+  "name": "AlphabetGame",
+  "version": "1.0.0",
+  "description": "Interactive letter and word puzzle game with image atlas rendering and solver",
+  "type": "luno-web-app",
+  "entrypoint": {
+    "file": "js/AlphabetGame.js",
+    "class": "AlphabetGame",
+    "method": "run"
+  },
+  "main": [
+    "js/StylesModule.js",
+    "js/UIFactory.js",
+    "js/ImageAtlasManager.js",
+    "js/ThemeManager.js",
+    "js/GameBoard.js",
+    "js/GameSolver.js",
+    "js/ScoreManager.js",
+    "js/AnimationController.js",
+    "js/DragController.js",
+    "js/SolverController.js",
+    "js/DevPanel.js",
+    "js/BoardRenderer.js",
+    "js/AlphabetGame.js"
+  ],
+  "library": [
+    "DomBasics.js",
+    "UITools.js"
+  ],
+  "styles": [
+    "css/AlphabetGame.css"
+  ]
+}
