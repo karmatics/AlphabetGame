@@ -219,7 +219,7 @@ class SolverController {
           makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '5px' } }, [autoAdjustCheckbox, makeElement('label', { htmlFor: 'auto-adjust-strategy' }, 'Auto-Adjust Strategy')]),
           makeElement('div', null, [
             makeElement('label', { style: { display: 'flex', justifyContent: 'space-between' } }, [makeElement('span', null, 'Best Move'), makeElement('span', null, 'Random Move')]),
-            makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '10px' } }, ['0%', slider, '100%']),
+            makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '10px' } }, '0%', slider, '100%'),
           ]),
           makeElement('div', { style: { display: 'flex', alignItems: 'center', gap: '5px' } }, [makeElement('label', null, 'Thrashing Threshold:'), thresholdInput, makeElement('span', null, '(stagnant moves)')]),
           makeElement('div', null, [makeElement('label', null, 'Current Thrashing Level:'), meterContainer]),
@@ -234,7 +234,6 @@ class SolverController {
         size: [400, 300],
       });
     }
-
 }
 if (typeof window !== 'undefined') window.SolverController = SolverController;
 globalThis.SolverController = SolverController;

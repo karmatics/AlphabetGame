@@ -1,4 +1,5 @@
 class AlphabetGame {
+
   init(targetElement) {
       StylesModule.applyAllStyles(); // Re-wired to call static class method
 
@@ -30,7 +31,7 @@ class AlphabetGame {
 
       this.winOverlay = makeElement('div', { className: 'win-overlay' }, [
         makeElement('h2', {}, 'You Win!'),
-        makeElement('p', {}, ['You solved the puzzle in ', this.winMovesDisplay, ' moves.']),
+        makeElement('p', {}, 'You solved the puzzle in ', this.winMovesDisplay, ' moves.'),
         winButtonContainer,
       ]);
 
@@ -45,13 +46,12 @@ class AlphabetGame {
       gameContainer.appendChild(this.gridSizeSelector);
       gameContainer.appendChild(diagnosticsButton);
       gameContainer.appendChild(darkModeToggle);
-      
+
       targetElement.appendChild(gameContainer);
 
       this.dragController.attachGridListener();
       this.changeGridSize(6);
     }
-
   setupNewGame() {
     this.board.shuffleAndValidate();
     this.initialBoardState = [...this.board.state];

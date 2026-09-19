@@ -18,6 +18,7 @@
     "js/UIFactory.js"
   ],
   "library": [
+    "DomBasics.js",
     "UITools.js"
   ],
   "thirdParty": []
